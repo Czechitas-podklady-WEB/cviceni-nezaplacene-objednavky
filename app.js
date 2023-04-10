@@ -92,9 +92,13 @@ const processIdentifiers = (identifiers) => {
 	document.querySelector('#identifikatory').textContent = identifiers.join(', ')
 }
 
-// Tyto dva řádky uprav podle zadání
-const emaily = []
-const identifikatory = []
+const identifikatory = nezaplaceneObjednavky.map((objednavka) => {
+	return objednavka.id
+})
+
+const emaily = nezaplaceneObjednavky.map((objednavka) => {
+	return `${objednavka.uzivatel.jmeno} <${objednavka.uzivatel.email}>`
+})
 
 processEmails(emaily)
 processIdentifiers(identifikatory)

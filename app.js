@@ -84,9 +84,17 @@ const nezaplaceneObjednavky = [
 	},
 ]
 
+const processEmails = (emails) => {
+	document.querySelector('#emaily').textContent = emails.join(', ')
+}
+
+const processIdentifiers = (identifiers) => {
+	document.querySelector('#identifikatory').textContent = identifiers.join(', ')
+}
+
 // Tyto dva řádky uprav podle zadání
 const emaily = []
 const identifikatory = []
 
-document.querySelector('#identifikatory').textContent = identifikatory.join(', ')
-document.querySelector('#emaily').textContent = emaily.join(', ')
+processEmails(emaily)
+processIdentifiers(identifikatory)

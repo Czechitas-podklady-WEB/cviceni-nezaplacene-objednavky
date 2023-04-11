@@ -93,8 +93,8 @@ const processIdentifiers = (identifiers) => {
 }
 
 // Tyto dva řádky uprav podle zadání
-const emaily = []
 const identifikatory = []
+const emaily = []
 
-processEmails(emaily)
 processIdentifiers(identifikatory)
+processEmails(emaily)
